@@ -3,7 +3,7 @@
 
 # Telegram Bot Configuration
 TELEGRAM_TOKEN = "TELEGRAM_BOT_TOKEN"
-USER_ID = "USERID"  # This is your personal Telegram user ID
+USER_IDS = ["USERID"]  # This is your personal Telegram user ID or you may choose many users if you want. 
 
 # Google Sheets Configuration
 SHEET_ID = "SHEETID" 
