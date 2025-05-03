@@ -47,7 +47,7 @@ Create a `config.py` file in the project root:
 
 ```python
 TELEGRAM_TOKEN = "your-telegram-bot-token"
-USER_ID = 123456789  # Your Telegram user ID
+USER_IDS = [123456789]  # Your Telegram user ID, you can input many if you want
 
 GOOGLE_SHEETS_CREDENTIALS_FILE = "service_account.json"
 SHEET_ID = "your-google-sheet-id"
@@ -84,6 +84,21 @@ The bot will:
 
 ## 📦 Optional: Docker
 
-_Coming soon._
+Added dockerfile from which I built my image. Important thing to consider: bot rely on timezone information, and you need to run image with your timezone
 
+```bash
+docker run -e "TZ=YourTimeZone" your-image-name
+```
+Example in my case 
+
+```bash
+docker run -e "TZ=Asia/Almaty" telegram-note-bot
+```
 ---
+
+## 📦 To-DO
+
+1. Add a local AI (probably LLAMA) which will read note and categorize it to the some groups: "useful quote", "gym", "remember to do", "other". Then bot should send information only from "useful quote" category.
+2. Add function ‘
+3. Add feature to talk with AI when message starts with "qq". i.e. When you enter grocery store you type "qq i am at grocery what I need to buy?" then AI will go through your notes and reply and disappeare after sometime. 
+
