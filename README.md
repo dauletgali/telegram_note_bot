@@ -96,7 +96,7 @@ docker run -e "TZ=Asia/Almaty" telegram-note-bot
 ```
 ---
 
-## 📦 To-DO
+## 🚀 To-DO
 
 1. Add a local AI (probably LLAMA) which will read note and categorize it to the some groups: "useful quote", "gym", "remember to do", "other". Then bot should send information only from "useful quote" category.
 2. Add function ‘
