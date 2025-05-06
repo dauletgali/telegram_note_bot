@@ -16,4 +16,4 @@ COPY claude_bot.py config.py creds.json ./
 # If you add other files in the future, just COPY . ./
 
 # Set default command to run the bot
-CMD ["python", "claude_bot.py"]
+CMD ["python","-u" ,"claude_bot.py"]

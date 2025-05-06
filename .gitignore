@@ -2,3 +2,4 @@
 .env
 creds.json
 ssh-key-2025-05-03.key
+__pycache__

@@ -125,8 +125,11 @@ async def schedule_daily_note(app: Application):
         except Exception as e:
             print(f"Error sending random note: {e}")
 
-        # Wait until the next day before scheduling again
-        await asyncio.sleep(60)  # short sleep before generating the next target
+        # Wait until next day
+        tomorrow = target + timedelta(days=1)
+        midnight = tomorrow.replace(hour=0, minute=0, second=0, microsecond=0)
+        sleep_time = (midnight - datetime.now()).total_seconds()
+        await asyncio.sleep(max(sleep_time, 0))
 
 # Entry point
 async def main():
